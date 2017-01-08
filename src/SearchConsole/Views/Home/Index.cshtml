@@ -8,6 +8,14 @@
     <p><a href="http://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
 </div>
 
+@using (Html.BeginForm("Index", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <label for="file">Upload Image:</label>
+    <input type="file" name="file" id="file" />
+    <input type="submit" value="Upload Image" />
+    @ViewBag.Message
+}
+
 <div class="row">
     <div class="col-md-4">
         <h2>Getting started</h2>
